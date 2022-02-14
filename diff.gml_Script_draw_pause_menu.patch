@@ -1,0 +1,51 @@
+--- a/gml_Script_draw_pause_menu/patch1.gml
++++ b/gml_Script_draw_pause_menu/patch1.gml
+@@ -225,7 +225,7 @@ for (pButt = firstButton; pButt < 8; pButt += 1)
+     }
+ }
+ startype = 0
+-if (mouse_x > 0 && mouse_x < 32 && mouse_y > (room_height - 64) && mouse_y < (room_height - 32))
++if (mouse_x > 0 && mouse_x < 32 && mouse_y > (room_height - 96) && mouse_y < (room_height - 64))
+ {
+     if (global.soundSocialTwitter == 0)
+     {
+@@ -242,9 +242,10 @@ if (mouse_x > 0 && mouse_x < 32 && mouse_y > (room_height - 64) && mouse_y < (ro
+ }
+ else
+     global.soundSocialTwitter = 0
+-draw_sprite_ext(ui_social_button, (0 + startype), 0, (room_height - 64), 1, 1, 0, c_white, 1)
++draw_sprite_ext(ui_social_button, (0 + startype), 0, (room_height - 96), 1, 1, 0, c_white, 1)
+ startype2 = 0
+-if (mouse_x > 0 && mouse_x < 32 && mouse_y > (room_height - 32) && mouse_y < room_height)
++startype3 = 0;
++if (mouse_x > 0 && mouse_x < 32 && mouse_y > (room_height - 64) && mouse_y < room_height - 32)
+ {
+     if (global.soundSocialDiscord == 0)
+     {
+@@ -259,9 +260,25 @@ if (mouse_x > 0 && mouse_x < 32 && mouse_y > (room_height - 32) && mouse_y < roo
+     }
+     text((room_width / 2), (room_height - 13), global.gamePausedSocialDiscord, c_gray, 1)
+ }
++else if (mouse_x > 0 && mouse_x < 32 && mouse_y > (room_height - 32) && mouse_y < room_height)
++{
++    if (global.soundSocialDiscord == 0)
++    {
++        global.soundSocialDiscord = 1
++        s_play(s_deserter_fire2, 0.8, 1)
++    }
++    startype3 = 1
++    if (mouse_check_button_pressed(mb_left) && global.gameendtimer == 0 && global.gamestarttimer == 0)
++    {
++        s_play(s_scroll_down, 1, 1)
++        url_open("")
++    }
++    text((room_width / 2), room(height - 13), global.gamePausedSocialDiscord, c_gray, 1)
++}
+ else
+     global.soundSocialDiscord = 0
+-draw_sprite_ext(ui_social_button, (2 + startype2), 0, (room_height - 32), 1, 1, 0, c_white, 1)
++draw_sprite_ext(ui_social_button, (2 + startype2), 0, (room_height - 64), 1, 1, 0, c_white, 1)
++draw_sprite_ext(ui_social_button, (2 + startype3), 0, (room_height - 32), 1, 1, 0, c_white, 1)
+ if (room != menu)
+     draw_sprite_ext(ui_pause_isaac, isaacFrame, (room_width / 2), 56, 1, 1, 0, image_blend, 1)
+ draw_set_halign(fa_right)
