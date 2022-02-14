@@ -37,7 +37,7 @@
 +    if (mouse_check_button_pressed(mb_left) && global.gameendtimer == 0 && global.gamestarttimer == 0)
 +    {
 +        s_play(s_scroll_down, 1, 1)
-+        url_open("")
++        url_open("https://discord.gg/Y8bvvqyFQw")
 +    }
 +    text((room_width / 2), room(height - 13), global.gamePausedSocialDiscord, c_gray, 1)
 +}
