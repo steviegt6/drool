@@ -1,11 +1,29 @@
 --- original/gml_Script_load_language.gml
 +++ modified/gml_Script_load_language.gml
-@@ -62,6 +_,8 @@
+@@ -62,6 +_,26 @@
      global.gamePausedButton[pButton] = load_json(global.LANGUAGE, ("gamePaused"@228 + string(pButton)))
      global.gamePausedButtonDescription[pButton] = load_json(global.LANGUAGE, ("gamePausedDescription"@274 + string(pButton)))
  }
 +global.gamePausedButton[8] = "Drool Options"@2396
 +global.gamePausedButtonDescription[8] = "lol droolptions"@2398
++global.gamePausedButton[10] = "Test Option"@2400
++global.gamePausedButtonDescription[10] = "foobar"@2401
++global.gamePausedButton[11] = ""@205
++global.gamePausedButtonDescription[11] = ""@205
++global.gamePausedButton[12] = ""@205
++global.gamePausedButtonDescription[12] = ""@205
++global.gamePausedButton[13] = ""@205
++global.gamePausedButtonDescription[13] = ""@205
++global.gamePausedButton[14] = ""@205
++global.gamePausedButtonDescription[14] = ""@205
++global.gamePausedButton[15] = ""@205
++global.gamePausedButtonDescription[15] = ""@205
++global.gamePausedButton[16] = ""@205
++global.gamePausedButtonDescription[16] = ""@205
++global.gamePausedButton[17] = ""@205
++global.gamePausedButtonDescription[17] = ""@205
++global.gamePausedButton[18] = "Back"@2402
++global.gamePausedButtonDescription[18] = "Return to the normal menu"@2403
  for (it1 = 0; it1 < global.ingameItems1; it1 += 1)
  {
      global.item1name[it1] = load_json(global.LANGUAGE, ("it1name"@276 + string(it1)))

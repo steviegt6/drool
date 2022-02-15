@@ -7,7 +7,7 @@
  hardmodeUnlocked = load_data("hardmodeUnlocked"@251, 0)
  challengesUnlocked = load_data("challengesUnlocked"@254, 0)
  loopRecord = load_data("loopRecord"@391, 0)
-@@ -10,7 +_,9 @@
+@@ -10,11 +_,14 @@
  global.gamestarttimer = -1
  global.soundSocialTwitter = 0
  global.soundSocialDiscord = 0
@@ -17,3 +17,8 @@
  global.restartTimer = 0
  global.gameMode = 0
  global.challengeType = 0
+ global.firstDeathEver = load_data("firstDeathEver"@645, 1)
++global.showDroolOptions = 0
+ load_language()
+ global.savedLevel = 1
+ global.savedLoop = 1
