@@ -7,3 +7,11 @@
  hardmodeUnlocked = load_data("hardmodeUnlocked"@251, 0)
  challengesUnlocked = load_data("challengesUnlocked"@254, 0)
  loopRecord = load_data("loopRecord"@391, 0)
+@@ -10,6 +_,7 @@
+ global.gamestarttimer = -1
+ global.soundSocialTwitter = 0
+ global.soundSocialDiscord = 0
++global.soundSocialDiscord2 = 0
+ global.pauseSounds[8] = 0
+ global.restartTimer = 0
+ global.gameMode = 0

@@ -22,15 +22,15 @@
  {
      if (global.soundSocialDiscord == 0)
      {
-@@ -259,9 +_,25 @@
-     }
-     text((room_width / 2), (room_height - 13), global.gamePausedSocialDiscord, c_gray, 1)
+@@ -261,7 +_,25 @@
  }
-+else if (mouse_x > 0 && mouse_x < 32 && mouse_y > (room_height - 32) && mouse_y < room_height)
+ else
+     global.soundSocialDiscord = 0
++if (mouse_x > 0 && mouse_x < 32 && mouse_y > (room_height - 32) && mouse_y < room_height)
 +{
-+    if (global.soundSocialDiscord == 0)
++    if (global.soundSocialDiscord2 == 0)
 +    {
-+        global.soundSocialDiscord = 1
++        global.soundSocialDiscord2 = 1
 +        s_play(s_deserter_fire2, 0.8, 1)
 +    }
 +    startype3 = 1
@@ -41,8 +41,8 @@
 +    }
 +    text((room_width / 2), (room_height - 13), global.gamePausedSocialDiscord2, c_gray, 1)
 +}
- else
-     global.soundSocialDiscord = 0
++else
++    global.soundSocialDiscord2 = 0
 -draw_sprite_ext(ui_social_button, (2 + startype2), 0, (room_height - 32), 1, 1, 0, c_white, 1)
 +draw_sprite_ext(ui_social_button, (2 + startype2), 0, (room_height - 64), 1, 1, 0, c_white, 1)
 +draw_sprite_ext(ui_social_button, (2 + startype3), 0, (room_height - 32), 1, 1, 0, c_white, 1)
