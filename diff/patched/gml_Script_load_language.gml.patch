@@ -1,5 +1,14 @@
 --- original/gml_Script_load_language.gml
 +++ modified/gml_Script_load_language.gml
+@@ -62,6 +_,8 @@
+     global.gamePausedButton[pButton] = load_json(global.LANGUAGE, ("gamePaused"@228 + string(pButton)))
+     global.gamePausedButtonDescription[pButton] = load_json(global.LANGUAGE, ("gamePausedDescription"@274 + string(pButton)))
+ }
++global.gamePausedButton[8] = "Drool Options"@2396
++global.gamePausedButtonDescription[8] = "lol droolptions"@2398
+ for (it1 = 0; it1 < global.ingameItems1; it1 += 1)
+ {
+     global.item1name[it1] = load_json(global.LANGUAGE, ("it1name"@276 + string(it1)))
 @@ -92,3 +_,4 @@
      global.enemyName[eName] = load_json(global.LANGUAGE, ("enemyName"@297 + string(eName)))
      global.enemyDescription[eName] = load_json(global.LANGUAGE, ("enemyDescription"@298 + string(eName)))

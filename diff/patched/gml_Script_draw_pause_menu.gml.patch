@@ -1,5 +1,14 @@
 --- original/gml_Script_draw_pause_menu.gml
 +++ modified/gml_Script_draw_pause_menu.gml
+@@ -3,7 +_,7 @@
+ firstButton = 1
+ if (room == menu && file_exists("irule1Run.sav"@95))
+     firstButton = 0
+-for (pButt = firstButton; pButt < 8; pButt += 1)
++for (pButt = firstButton; pButt < 9; pButt += 1)
+ {
+     xx = (room_width / 2)
+     yy = (((room_height / 2) - 21) + (20 * pButt))
 @@ -225,7 +_,7 @@
      }
  }
@@ -22,7 +31,7 @@
  {
      if (global.soundSocialDiscord == 0)
      {
-@@ -261,7 +_,25 @@
+@@ -261,11 +_,30 @@
  }
  else
      global.soundSocialDiscord = 0
@@ -49,3 +58,9 @@
  if (room != menu)
      draw_sprite_ext(ui_pause_isaac, isaacFrame, (room_width / 2), 56, 1, 1, 0, image_blend, 1)
  draw_set_halign(fa_right)
+-text((room_width - 8), (room_height - 15), global.version, c_white, 1)
++text((room_width - 8), (room_height - 30), global.version, c_white, 1)
++text((room_width - 8), (room_height - 15), global.droolVersion, c_white, 1)
+ draw_set_halign(fa_center)
+ draw_sprite_ext(s_cursor_gameover, 0, mouse_x, mouse_y, 1, 1, 0, image_blend, 1)
+ if (global.gameendtimer > 0)
