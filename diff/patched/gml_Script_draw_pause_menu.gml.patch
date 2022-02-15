@@ -39,7 +39,7 @@
 +        s_play(s_scroll_down, 1, 1)
 +        url_open("https://discord.gg/Y8bvvqyFQw"@2389)
 +    }
-+    text((room_width / 2), (room_height - 13), global.cardName[1000], c_gray, 1)
++    text((room_width / 2), (room_height - 13), global.gamePausedSocialDiscord2, c_gray, 1)
 +}
  else
      global.soundSocialDiscord = 0
