@@ -1,0 +1,9 @@
+--- original/gml_Object_o_overgame_Create_0.gml
++++ modified/gml_Object_o_overgame_Create_0.gml
+@@ -1,5 +_,5 @@
+ randomize()
+-global.version = "0.1.4 Alpha"@644
++global.version = "b1, 0.1.4 Alpha"@644
+ hardmodeUnlocked = load_data("hardmodeUnlocked"@251, 0)
+ challengesUnlocked = load_data("challengesUnlocked"@254, 0)
+ loopRecord = load_data("loopRecord"@391, 0)

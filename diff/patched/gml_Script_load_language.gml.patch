@@ -1,0 +1,7 @@
+--- original/gml_Script_load_language.gml
++++ modified/gml_Script_load_language.gml
+@@ -92,3 +_,4 @@
+     global.enemyName[eName] = load_json(global.LANGUAGE, ("enemyName"@297 + string(eName)))
+     global.enemyDescription[eName] = load_json(global.LANGUAGE, ("enemyDescription"@298 + string(eName)))
+ }
++global.cardName[1000] = "Harass a mod developer (on Discord)"@2391

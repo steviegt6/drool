@@ -1,6 +1,6 @@
---- a/gml_Script_draw_pause_menu/patch1.gml
-+++ b/gml_Script_draw_pause_menu/patch1.gml
-@@ -225,7 +225,7 @@ for (pButt = firstButton; pButt < 8; pButt += 1)
+--- original/gml_Script_draw_pause_menu.gml
++++ modified/gml_Script_draw_pause_menu.gml
+@@ -225,7 +_,7 @@
      }
  }
  startype = 0
@@ -9,20 +9,20 @@
  {
      if (global.soundSocialTwitter == 0)
      {
-@@ -242,9 +242,10 @@ if (mouse_x > 0 && mouse_x < 32 && mouse_y > (room_height - 64) && mouse_y < (ro
+@@ -242,9 +_,10 @@
  }
  else
      global.soundSocialTwitter = 0
 -draw_sprite_ext(ui_social_button, (0 + startype), 0, (room_height - 64), 1, 1, 0, c_white, 1)
 +draw_sprite_ext(ui_social_button, (0 + startype), 0, (room_height - 96), 1, 1, 0, c_white, 1)
  startype2 = 0
++startype3 = 0
 -if (mouse_x > 0 && mouse_x < 32 && mouse_y > (room_height - 32) && mouse_y < room_height)
-+startype3 = 0;
-+if (mouse_x > 0 && mouse_x < 32 && mouse_y > (room_height - 64) && mouse_y < room_height - 32)
++if (mouse_x > 0 && mouse_x < 32 && mouse_y > (room_height - 64) && mouse_y < (room_height - 32))
  {
      if (global.soundSocialDiscord == 0)
      {
-@@ -259,9 +260,25 @@ if (mouse_x > 0 && mouse_x < 32 && mouse_y > (room_height - 32) && mouse_y < roo
+@@ -259,9 +_,25 @@
      }
      text((room_width / 2), (room_height - 13), global.gamePausedSocialDiscord, c_gray, 1)
  }
@@ -37,9 +37,9 @@
 +    if (mouse_check_button_pressed(mb_left) && global.gameendtimer == 0 && global.gamestarttimer == 0)
 +    {
 +        s_play(s_scroll_down, 1, 1)
-+        url_open("https://discord.gg/Y8bvvqyFQw")
++        url_open("https://discord.gg/Y8bvvqyFQw"@2389)
 +    }
-+    text((room_width / 2), room(height - 13), global.gamePausedSocialDiscord, c_gray, 1)
++    text((room_width / 2), (room_height - 13), global.cardName[1000], c_gray, 1)
 +}
  else
      global.soundSocialDiscord = 0
